@@ -1,0 +1,70 @@
+# Secrets
+.env
+*.pem
+*credentials*.json
+service-account*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/cache/
+
+# Local-only trees
+tess_local/
+
+# Tier 1: data directories (raw, interim, processed)
+data/raw/pharmacy_sources/
+data/reference/
+notebooks/data/
+# Re-include small reference tables and the data docs:
+!data/README.md
+!data/reference/
+!data/reference/*.csv
+
+# Tier 2: geospatial binaries anywhere
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.graphml
+*.geojson
+*.gpkg
+*.tif
+*.tiff
+
+# Tier 3: tabular data
+*.csv
+*.xlsx
+*.xls
+*.parquet
+!data/reference/*.csv
+
+# Tier 4: fonts
+*.ttf
+*.otf
+
+# Rendered / generated outputs
+README.html
+reports/*.html
+_site/
+.quarto/
+notebooks/figures/
+
+# OS / editor noise
+desktop.ini
+Thumbs.db
+.DS_Store
+*.csv.xml
+schema.ini
