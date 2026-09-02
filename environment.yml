@@ -1,0 +1,28 @@
+name: sa-pharmacy-access
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - geopandas=1.0.1
+  - shapely=2.0.6
+  - pyproj=3.7.0
+  - fiona=1.10.1
+  - osmnx=2.1.0
+  - networkx=3.6.1
+  - scipy=1.14.1
+  - numpy=1.26.4
+  - pandas=2.2.3
+  - matplotlib=3.9.2
+  - matplotlib-scalebar=0.8.1
+  - mapclassify=2.8.1
+  - requests=2.32.3
+  - tqdm=4.66.5
+  - pyyaml=6.0.2
+  - python-dotenv=1.0.1
+  - jupyterlab=4.2.5
+  - ipykernel=6.29.5
+  - pip
+  - pip:
+      - camelot-py[cv]==0.11.0
+      - google-cloud-bigquery==3.25.0
+      - rapidfuzz==3.10.0
