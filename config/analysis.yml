@@ -1,0 +1,30 @@
+# 2SFCA and network-threshold analysis constants.
+# Units: beta is per meter; catchments/thresholds in km; snap flag in meters.
+
+decay:
+  beta: 0.0003          # negative exponential; 1km=0.741, 5km=0.223, 10km=0.050
+
+2sfca:
+  min_weighted_pop: 50  # Rj denominator floor, prevents runaway ratios
+
+catchments_km:
+  gauteng:
+    walk: 2
+    drive: 5
+  kwazulu_natal:
+    walk: 3
+    drive: 10
+
+thresholds_km:          # policy reference points (network_threshold.ipynb)
+  walk: 3
+  drive: 10
+
+threshold_bands_km:     # full exceedance-flag grids (network_threshold.ipynb)
+  walk: [1, 2, 3, 5]
+  drive: [5, 10, 15, 20]
+  euclidean: [1, 3, 5, 10]
+
+k_nearest: 3            # sal_pharmacy_distance_k3.ipynb
+dijkstra_cutoff_m: 50000
+
+snap_flag_m: 500        # centroid-to-node snap distance worth flagging
