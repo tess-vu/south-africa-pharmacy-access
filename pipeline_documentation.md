@@ -567,8 +567,8 @@ Tercile boundaries are computed from nonzero $A_{i}$ values within each province
 |--------|------|-------------|
 | `walk_snap_dist_m` | float | Euclidean distance from centroid to nearest walk-network node (meters) |
 | `drive_snap_dist_m` | float | Euclidean distance from centroid to nearest drive-network node (meters) |
-| `walk_snap_flagged` | bool | True if walk snap distance exceeds 500m |
-| `drive_snap_flagged` | bool | True if drive snap distance exceeds 500m |
+| `walk_snap_flag` | bool | True if walk snap distance exceeds 500m |
+| `drive_snap_flag` | bool | True if drive snap distance exceeds 500m |
 
 **Threshold exceedance flags:**
 
@@ -580,8 +580,11 @@ Tercile boundaries are computed from nonzero $A_{i}$ values within each province
 
 | Column | Type | Description |
 |--------|------|-------------|
-| `walk_access_type` | str | Walking access typology: Pharmacy desert, Connectivity gap, Demand overcrowding, Access gap, Well-served, Artifact zone |
-| `drive_access_type` | str | Driving access typology (same categories) |
+| `walk_typology` | str | Walking access typology: Well-Served, Demand Overcrowding, Connectivity Gap, Access Gap, Pharmacy Desert, Artifact Zone |
+| `drive_typology` | str | Driving access typology (same categories, 10 km threshold) |
+
+Note: Shapefile export truncates these to `walk_typol` / `drive_typo` (DBF
+10-character limit). The Mapbox layer expressions reference the truncated names.
 
 ---
 

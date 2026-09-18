@@ -58,6 +58,14 @@ The raw scores are continuous numbers that are hard to communicate, so telling a
 
 These tiers are calculated separately for each province because the two provinces use different travel distances by design where KZN is roughly multiple times larger and much less dense, so residents there might travel farther for FORMAL services, no knowledge on gray market pharmacies that sprung up to cover the formal gaps.
 
+> **Superseded (2026-09):** This five-tier scheme described an earlier
+> classification. The current pipeline exports no tiers from the 2SFCA
+> notebook; `2sfca_compute.ipynb` prints a three-tier diagnostic
+> (Pharmacy Desert / Moderate Access / Served, Province Terciles) that is not
+> written to any file. The canonical published typology is the six-category
+> `walk_typology` / `drive_typology` produced by `combine_access_score_network_threshold.ipynb`.
+> See `pipeline_documentation.md`.
+
 ## BIG NOTE
 
 This means that the Ai scores are NOT directly comparable between provinces. A SAL with a score of 0.1 in Gauteng is not necessarily better or worse than a SAL with a score of 0.1 in KZN because the underlying travel distances and population densities are different. The scores are only meaningful within the context of their own province's distribution. So we can say "This SAL is in the top 5% of Gauteng" or "This SAL is in the bottom third of KZN" but we CANNOT say "This SAL has better access than that SAL in the other province" based on the raw Ai scores alone. The tiers help with this by categorizing SALs relative to their own province's distribution, but we should be careful not to overinterpret the scores as absolute measures of access without considering the province context and the different assumptions that went into each model run. The scores are best used for identifying relative access within each province and for flagging areas that are particularly underserved or overserved compared to their province peers, rather than for making direct cross-province comparisons.

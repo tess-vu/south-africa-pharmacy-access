@@ -25,10 +25,6 @@ tess_local/
 data/raw/pharmacy_sources/
 data/reference/
 notebooks/data/
-# Re-include small reference tables and the data docs:
-!data/README.md
-!data/reference/
-!data/reference/*.csv
 
 # Tier 2: geospatial binaries anywhere
 *.shp
@@ -49,7 +45,6 @@ notebooks/data/
 *.xlsx
 *.xls
 *.parquet
-!data/reference/*.csv
 
 # Tier 4: fonts
 *.ttf
@@ -60,7 +55,7 @@ README.html
 reports/*.html
 _site/
 .quarto/
-notebooks/figures/
+results/
 
 # OS / editor noise
 desktop.ini

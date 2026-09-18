@@ -8,7 +8,7 @@ DATA = REPO_ROOT / "notebooks" / "data"
 
 NETWORKS = DATA / "networks"
 COMBINED = DATA / "combined"
-FIGURES = REPO_ROOT / "notebooks" / "figures"
+FIGURES = REPO_ROOT / "results" / "figures"
 
 SAL_W_WARD_NEW   = DATA / "sal_w_ward_new" / "sal_w_ward_new.shp"
 SAL_W_WARD_DEDUP = DATA / "sal_w_ward_dedup" / "sal_w_ward_dedup.shp"
